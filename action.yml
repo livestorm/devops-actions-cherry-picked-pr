@@ -1,0 +1,18 @@
+name: 'Create PR to other branches, on commits to a branch'
+description: 'Commits, pushes a new PR branch and creates PR for the commits.'
+author: '@Rohja'
+inputs:
+  pr_branch:
+    description: 'Target Branch to create PR'
+    required: true
+    default: 'production'
+  pr_labels:
+    description: 'Labels for the new PR'
+    required: false
+    default: 'PRODUCTION'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: git-merge
+  color: yellow
