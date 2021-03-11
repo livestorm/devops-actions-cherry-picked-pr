@@ -33,4 +33,4 @@ git fetch --all
 git checkout -b "${PR_BRANCH}" origin/"${INPUT_PR_BRANCH}"
 git cherry-pick "${GITHUB_SHA}"
 git push -u origin "${PR_BRANCH}"
-hub pull-request -b "${INPUT_PR_BRANCH}" -h "${PR_BRANCH}" -l "${INPUT_PR_LABELS}" -a "${GITHUB_ACTOR}" -m "\"${PR_TITLE_CLEANED}\""
+hub pull-request -b "${INPUT_PR_BRANCH}" -h "${PR_BRANCH}" -l "${INPUT_PR_LABELS}" -a "${GITHUB_ACTOR}" -m "${PR_TITLE_CLEANED}"
